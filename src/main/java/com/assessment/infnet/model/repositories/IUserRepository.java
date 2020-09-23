@@ -5,7 +5,7 @@ import com.assessment.infnet.model.models.User;
 import org.springframework.web.bind.annotation.*;
 
 
-@FeignClient(url = "http://localhost:8081/api/user", name="userClient")
+@FeignClient(url = "http://localhost:8083/api/user", name="userClient")
 public interface IUserRepository {
 
     @PostMapping(value = "/login")
