@@ -1,4 +1,3 @@
-<jsp:useBean id="user" scope="session" type="com.assessment.infnet.model.models.User"/>
 <%--
   Created by IntelliJ IDEA.
   User: jonathan
