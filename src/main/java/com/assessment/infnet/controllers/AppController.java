@@ -1,7 +1,7 @@
 package com.assessment.infnet.controllers;
 
-import com.assessment.infnet.models.dao.User;
-import com.assessment.infnet.models.services.UserService;
+import com.assessment.infnet.model.models.User;
+import com.assessment.infnet.model.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

@@ -1,7 +1,7 @@
-package com.assessment.infnet.models.services;
+package com.assessment.infnet.model.services;
 
-import com.assessment.infnet.models.dao.User;
-import com.assessment.infnet.models.repository.IUserRepository;
+import com.assessment.infnet.model.models.User;
+import com.assessment.infnet.model.repositories.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +20,6 @@ public class UserService {
     }
 
     public void addUser(User user) {
-        userRepository.save(user);
+        userRepository.addUser(user);
     }
 }

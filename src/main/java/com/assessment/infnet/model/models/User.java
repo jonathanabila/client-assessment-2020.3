@@ -1,12 +1,7 @@
-package com.assessment.infnet.models.dao;
+package com.assessment.infnet.model.models;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "TUser")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String userName;
     private String password;
