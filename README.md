@@ -1,1 +1,1 @@
-Git link: https://github.com/jonathanabila/infnet-assessment-2020.3
+https://github.com/jonathanabila/client-assessment-2020.3
