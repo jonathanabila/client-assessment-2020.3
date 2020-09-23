@@ -38,7 +38,7 @@
                 </div>
                 <div class="form-group">
                     <label for="password">Senha: </label>
-                    <input id="password" name="password" type="password" class="form-control"required>
+                    <input id="password" name="password" type="password" class="form-control" required>
                     <div class="invalid-feedback"> Senha é um campo obrigatório!</div>
                 </div>
                 <button type="submit" class="btn btn-primary">Logar</button>

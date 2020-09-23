@@ -1,3 +1,4 @@
+<jsp:useBean id="user" scope="session" type="com.assessment.infnet.models.dao.User"/>
 <%--
   Created by IntelliJ IDEA.
   User: jonathan
@@ -25,6 +26,9 @@
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li>
+                    <a class="nav-link" href="<c:url value="/logout"/>">Sair</a>
                 </li>
             </ul>
         </div>

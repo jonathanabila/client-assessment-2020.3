@@ -18,11 +18,12 @@ public class AppController {
     public String showInit() { return "login"; }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String showLogin() { return this.showInit(); }
-
-    @GetMapping(value = "/home")
-    public String showHome() {
-        return "home";
+    public String showLogin(Model model) {
+        Object user = model.getAttribute("user");
+        if (user != null) {
+            return "redirect:/home";
+        }
+        return this.showInit();
     }
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
@@ -38,6 +39,11 @@ public class AppController {
             model.addAttribute("error", "Usuário ou senha inválido!");
             return "login";
         }
+    }
+
+    @RequestMapping(value = "/home", method = RequestMethod.GET)
+    public String showHome() {
+        return "home";
     }
 
     @RequestMapping(value = "/logout", method = RequestMethod.GET)
