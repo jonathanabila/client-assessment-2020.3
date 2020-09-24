@@ -12,7 +12,7 @@ public interface IUserRepository {
     User authenticate(@RequestParam String userName, @RequestParam String password);
 
     @GetMapping(value = "/{userName}")
-    User findByUserName(@PathVariable String userName);
+    boolean findByUserName(@PathVariable String userName);
 
     @PostMapping(value = "/")
     void addUser(@RequestBody User user);

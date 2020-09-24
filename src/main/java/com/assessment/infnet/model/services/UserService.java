@@ -11,12 +11,12 @@ public class UserService {
     @Autowired
     private IUserRepository userRepository;
 
-    public User userExists(String userName) {
+    public boolean userExists(String userName) {
         return userRepository.findByUserName(userName);
     }
 
-    public boolean authenticate(String userName, String password) {
-        return userRepository.authenticate(userName, password)  != null;
+    public Object authenticate(String userName, String password) {
+        return userRepository.authenticate(userName, password);
     }
 
     public void addUser(User user) {

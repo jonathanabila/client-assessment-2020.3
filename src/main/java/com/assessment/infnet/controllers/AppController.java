@@ -1,12 +1,13 @@
 package com.assessment.infnet.controllers;
 
-import com.assessment.infnet.model.models.User;
 import com.assessment.infnet.model.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.support.SessionStatus;
+
+import java.util.Objects;
 
 @Controller
 @SessionAttributes("user")
@@ -28,11 +29,13 @@ public class AppController {
 
     @RequestMapping(value = "login", method = RequestMethod.POST)
     public String showHome(Model model, @RequestParam String userName, @RequestParam String password) {
-        User user = userService.userExists(userName);
+        boolean userExists = userService.userExists(userName);
 
-        if (user == null) {
+        if (!userExists) {
             return "/signup";
-        } else if(userService.authenticate(userName, password)) {
+        }
+        Object user = userService.authenticate(userName, password);
+        if(!Objects.isNull(user)) {
             model.addAttribute("user", user);
             return "redirect:/home";
         } else {
