@@ -14,6 +14,6 @@ public interface IUserRepository {
     @GetMapping(value = "/{userName}")
     User findByUserName(@PathVariable String userName);
 
-    @PostMapping(value = "/add")
+    @PostMapping(value = "/")
     void addUser(@RequestBody User user);
 }
