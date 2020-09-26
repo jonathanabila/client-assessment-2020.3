@@ -3,7 +3,7 @@ package com.assessment.infnet.model.models;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public abstract class Product {
+public class Product {
     public Integer id;
     public float price;
     public String description;
