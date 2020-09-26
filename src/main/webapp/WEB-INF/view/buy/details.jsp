@@ -8,18 +8,17 @@
 			<input type="hidden" name="id" value="${buy.id}">
 
 			<div class="form-group">
-				<label for="buyers">Comprador:</label>
+				<h4>Comprador:</h4>
 				<select id="buyers" class="form-control" name="buyer.id" disabled>
 					<option value="${buy.buyer.id}">${buy.buyer.email}</option>
 				</select>
 				<br>
-				<p>Para entregar: ${buy.forDelivery}</p>
-
-				<label for="date">Data: </label>
-				<input type="datetime-local" class="form-control" name="date" id="date" value="${buy.date}" disabled>
+				<h4>Para entregar: ${buy.getForDeliveryString()}</h4><br>
+				<h4>Data: </h4>
+				<input type="datetime-local" class="form-control" name="date" id="date" value="${buy.date}" disabled><br>
 			</div>
 			<div class="form-group">
-				<label>Produtos:</label><br>
+				<h3>Produtos:</h3><br>
 				<c:if test="${not empty buy.items}">
 					<table class="table table-striped">
 						<thead>
@@ -33,7 +32,7 @@
 						<c:forEach var="p" items="${buy.items}">
 							<td>${p.description}</td>
 							<td>${p.price}</td>
-							<td>${p.productType}</td>
+							<td>${p.getProductTypeString()}</td>
 						</c:forEach>
 						</tbody>
 					</table>

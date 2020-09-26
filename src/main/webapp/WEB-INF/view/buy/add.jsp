@@ -44,7 +44,7 @@
 								</td>
 								<td>${p.description}</td>
 								<td>${p.price}</td>
-								<td>${p.productType}</td>
+								<td>${p.getProductTypeString()}</td>
 							</c:forEach>
 							</tbody>
 						</table>

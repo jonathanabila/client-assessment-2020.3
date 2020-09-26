@@ -18,6 +18,14 @@ public class Monitor extends com.assessment.infnet.model.models.Product {
         return this.heightAdjustable;
     }
 
+    public String getHeightAdjustableString() {
+        if(this.heightAdjustable) {
+            return "Sim";
+        } else {
+            return "Não";
+        }
+    }
+
     public void setScreenSize(int screenSize) {
         this.screenSize = screenSize;
     }

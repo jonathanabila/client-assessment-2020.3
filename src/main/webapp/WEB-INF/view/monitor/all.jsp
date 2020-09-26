@@ -35,7 +35,7 @@
 							<td>${m.releaseDate}</td>
 							<td>${m.description}</td>
 							<td>${m.screenSize}</td>
-							<td>${m.heightAdjustable}</td>
+							<td>${m.getHeightAdjustableString()}</td>
 						</tr>
 					</c:forEach>
 					</tbody>

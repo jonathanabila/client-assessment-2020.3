@@ -31,7 +31,7 @@
 						<tr>
 							<td>${b.id}</td>
 							<td>${b.date}</td>
-							<td>${b.forDelivery}</td>
+							<td>${b.getForDeliveryString()}</td>
 							<td>${b.buyer.email}</td>
 							<td>${b.items.size()}</td>
 							<td><a href="/buy/${b.id}">Detalhes</a></td>

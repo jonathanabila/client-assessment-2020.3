@@ -21,6 +21,22 @@ public class CoffeeMachine extends com.assessment.infnet.model.models.Product {
         return this.strengthControl;
     }
 
+    public String setTemperatureControlString(boolean temperatureControl) {
+        if(this.temperatureControl) {
+            return "Sim";
+        } else {
+            return "Não";
+        }
+    }
+
+    public String getStrengthControlString() {
+        if(this.strengthControl) {
+            return "Sim";
+        } else {
+            return "Não";
+        }
+    }
+
     public boolean getTemperatureControl() {
         return this.temperatureControl;
     }

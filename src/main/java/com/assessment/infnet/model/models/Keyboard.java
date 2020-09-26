@@ -25,4 +25,20 @@ public class Keyboard extends com.assessment.infnet.model.models.Product {
     public boolean getIsMechanic() {
         return this.isMechanic;
     }
+
+    public String getIsRGBString() {
+        if(this.isRBG) {
+            return "Sim";
+        } else {
+            return "Não";
+        }
+    }
+
+    public String getIsMechanicString() {
+        if(this.isMechanic) {
+            return "Sim";
+        } else {
+            return "Não";
+        }
+    }
 }

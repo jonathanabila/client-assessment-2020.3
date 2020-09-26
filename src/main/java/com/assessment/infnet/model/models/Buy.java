@@ -8,7 +8,7 @@ import java.util.List;
 public class Buy {
     public Integer id;
     public LocalDateTime date;
-    public boolean forDelivery;
+    private boolean forDelivery;
     public Buyer buyer;
     public List<Product> items;
 
@@ -55,6 +55,14 @@ public class Buy {
 
     public boolean getForDelivery() {
         return this.forDelivery;
+    }
+
+    public String getForDeliveryString() {
+        if(this.forDelivery) {
+            return "Sim";
+        } else {
+            return "Não";
+        }
     }
 }
 

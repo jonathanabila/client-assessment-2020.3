@@ -39,7 +39,7 @@
 							<td>${m.price}</td>
 							<td>${m.releaseDate}</td>
 							<td>${m.description}</td>
-							<td>${m.productType}</td>
+							<td>${m.getProductTypeString()}</td>
 						</tr>
 					</c:forEach>
 					</tbody>

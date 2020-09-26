@@ -60,4 +60,16 @@ public class Product {
     public String getProductType() {
         return productType;
     }
+
+    public String getProductTypeString() {
+        switch (this.productType) {
+            case "C":
+                return "Máquina de café";
+            case "K":
+                return "Teclado";
+            case "M":
+                return "Monitor";
+        }
+        return this.productType;
+    }
 }

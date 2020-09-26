@@ -34,8 +34,8 @@
 							<td>${k.price}</td>
 							<td>${k.releaseDate}</td>
 							<td>${k.description}</td>
-							<td>${k.isRGB}</td>
-							<td>${k.isMechanic}</td>
+							<td>${k.getIsRGBString()}</td>
+							<td>${k.getIsMechanicString()}</td>
 						</tr>
 					</c:forEach>
 					</tbody>
