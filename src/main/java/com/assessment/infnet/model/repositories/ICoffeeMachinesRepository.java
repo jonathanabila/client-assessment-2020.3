@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(url = "http://localhost:8083/api/coffee-machine", name = "coffeeMachineClient")
+@FeignClient(url = "http://localhost:8083/api/product/coffee-machine", name = "coffeeMachineClient")
 public interface ICoffeeMachinesRepository {
     @GetMapping(value = "/")
     List<CoffeeMachine> getCoffeeMachines();
