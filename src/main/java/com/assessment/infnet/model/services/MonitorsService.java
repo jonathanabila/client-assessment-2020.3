@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class MonitorsService {
+public class MonitorsService extends ProductsService{
     @Autowired
     private IMonitorsRepository monitorsRepository;
 

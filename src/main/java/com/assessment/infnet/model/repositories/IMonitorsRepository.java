@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(url = "http://localhost:8083/api/monitor", name = "monitorClient")
+@FeignClient(url = "http://localhost:8083/api/product/monitor", name = "monitorClient")
 public interface IMonitorsRepository {
     @GetMapping(value = "/")
     List<Monitor> getMonitors();
