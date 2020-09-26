@@ -7,7 +7,7 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<c:import url="style.jsp" />
+<jsp:include page="/WEB-INF/view/style.jsp" />
     <footer style="display: flex; justify-content: center; margin-top: auto">
         <div class="container">
             <hr style="border-top: 1px solid white">
