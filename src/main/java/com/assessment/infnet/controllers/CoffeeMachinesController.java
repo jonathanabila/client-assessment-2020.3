@@ -31,6 +31,6 @@ public class CoffeeMachinesController {
     @PostMapping(value = "/coffee-machine")
     public String add(CoffeeMachine coffeeMachine) {
         coffeeMachinesService.add(coffeeMachine);
-        return "redirect:/coffee-machine";
+        return "redirect:/coffee-machines";
     }
 }
