@@ -1,6 +1,5 @@
 package com.assessment.infnet.controllers;
 
-import com.assessment.infnet.model.models.CoffeeMachine;
 import com.assessment.infnet.model.models.Keyboard;
 import com.assessment.infnet.model.models.Product;
 import com.assessment.infnet.model.services.KeyboardsService;
