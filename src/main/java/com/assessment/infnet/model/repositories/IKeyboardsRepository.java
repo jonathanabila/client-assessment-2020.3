@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(url = "http://localhost:8083/api/keyboard", name = "keyboardClient")
+@FeignClient(url = "http://localhost:8083/api/product/keyboard", name = "keyboardClient")
 public interface IKeyboardsRepository {
     @GetMapping(value = "/")
     List<Keyboard> getKeyboards();
