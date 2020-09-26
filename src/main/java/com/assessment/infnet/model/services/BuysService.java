@@ -12,7 +12,8 @@ public class BuysService {
     @Autowired
     private IBuysRepository buysRepository;
 
-    public void Add(Buy buy) {
+    public void add(Buy buy) {
+        buy.setDateNow();
         buysRepository.addBuy(buy);
     }
 

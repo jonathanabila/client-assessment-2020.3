@@ -1,5 +1,6 @@
 package com.assessment.infnet.model.models;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -13,34 +14,47 @@ public class Buy {
 
     public Buy() {}
 
-    public Buy(Integer id, LocalDateTime date, boolean forDelivery) {
+    public Buy(Integer id, boolean forDelivery) {
         this();
         this.id = id;
-        this.date = date;
         this.forDelivery = forDelivery;
+    }
+
+    public List<Product> getItems() {
+        return items;
     }
 
     public void setItems(List<Product> items) {
         this.items = items;
     }
 
+    public Buyer getBuyer() {
+        return buyer;
+    }
+
     public void setBuyer(Buyer buyer) {
         this.buyer = buyer;
     }
 
-    public String getDate() {
-        return this.date.format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+    public LocalDateTime getDate() {
+        return this.date;
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "%s;%s;%s;%d",
-                this.getDate(),
-                this.forDelivery,
-                this.buyer,
-                this.items.size()
-        );
+    public void setDate(String date) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        this.date = LocalDateTime.parse(date, dtf);
+    }
+
+    public void setDateNow() {
+        this.date = LocalDateTime.now();
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public boolean getForDelivery() {
+        return this.forDelivery;
     }
 }
 
