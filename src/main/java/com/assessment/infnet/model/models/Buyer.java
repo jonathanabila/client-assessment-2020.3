@@ -12,25 +12,43 @@ public class Buyer {
 
     public Buyer() {}
 
-    public Buyer(Integer id, String email, String socialSecurityNumber, LocalDate birth) {
+    public Buyer(Integer id, String email, String socialSecurityNumber) {
         this();
         this.id = id;
         this.email = email;
         this.socialSecurityNumber = socialSecurityNumber;
-        this.birth = birth;
     }
 
-    public String getBirthString() {
-        return birth.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    public void setBirth(String birth) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        this.birth = LocalDate.parse(birth, dtf);
     }
 
-    @Override
-    public String toString() {
-        return String.format(
-                "%s;%s;%s",
-                this.email,
-                this.socialSecurityNumber,
-                getBirthString()
-        );
+    public LocalDate getBirth() {
+        return this.birth;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getSocialSecurityNumber() {
+        return socialSecurityNumber;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setSocialSecurityNumber(String socialSecurityNumber) {
+        this.socialSecurityNumber = socialSecurityNumber;
     }
 }

@@ -12,7 +12,7 @@ public class BuyersService {
     @Autowired
     private IBuyersRepository buyersRepository;
 
-    public void Add(Buyer buyer) {
+    public void add(Buyer buyer) {
         buyersRepository.addBuyer(buyer);
     }
 

@@ -20,10 +20,6 @@ public class Product {
         this.productType = productType;
     }
 
-    public String getReleaseDateString() {
-        return releaseDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
-    }
-
     public void setId(Integer id) {
         this.id = id;
     }
