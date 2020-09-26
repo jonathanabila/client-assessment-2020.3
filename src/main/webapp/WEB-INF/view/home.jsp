@@ -14,7 +14,8 @@
 		<div class="jumbotron">
 			<h3 class="card-title text-center">Assessment - Jonathan Tolentino</h3>
 			<p class="lead">Trabalho de conclusão do periodo de Java - 2020.2/2020.3</p>
-			<a href="https://github.com/jonathanabila/infnet-assessment-2020.3" target="_blank" class="btn btn-primary">Repositório Git</a>
+			<a href="https://github.com/jonathanabila/infnet-assessment-2020.3" target="_blank" class="btn btn-primary">Client Git</a>
+			<a href="https://github.com/jonathanabila/api-assessment-2020.3" target="_blank" class="btn btn-primary">API Git</a>
 		</div>
 	</div>
 </div>

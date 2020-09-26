@@ -14,23 +14,23 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar bg">
-        <a class="navbar-brand" href="home">
-            <img class="p-3 align-items-center" src="<c:url value="/resources/images/jedi-logo.svg" />" alt="infnet">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div style="display: flex" class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="<c:url value="/buys"/>">Compras</a>
-            <a class="nav-link" href="<c:url value="/buyers"/>">Compradores</a>
-            <a class="nav-link" href="<c:url value="/products"/>">Produtos</a>
-            <a class="nav-link" href="<c:url value="/coffee-machines"/>">Máquinas de café</a>
-            <a class="nav-link" href="<c:url value="/keyboards"/>">Teclados</a>
-            <a class="nav-link" href="<c:url value="/monitors"/>">Monitores</a>
-            <a class="nav-link" href="<c:url value="/user"/>">Perfil</a>
-            <a class="nav-link" href="<c:url value="/logout"/>">Sair</a>
+    <nav class="bg-light">
+        <div style="display: flex; justify-content: space-between; align-items: center" >
+            <div style="display: flex; align-items: center">
+                <a class="nav-link" href="<c:url value="/home"/>">
+                    <img class="align-items-center" src="<c:url value="/resources/images/jedi-logo.svg" />" alt="infnet">
+                    Home
+                </a>
+                <a class="nav-link" href="<c:url value="/buys"/>">Compras</a>
+                <a class="nav-link" href="<c:url value="/buyers"/>">Compradores</a>
+                <a class="nav-link" href="<c:url value="/products"/>">Produtos</a>
+                <a class="nav-link" href="<c:url value="/coffee-machines"/>">Máquinas de café</a>
+                <a class="nav-link" href="<c:url value="/keyboards"/>">Teclados</a>
+                <a class="nav-link" href="<c:url value="/monitors"/>">Monitores</a>
+            </div>
+            <div style="display: flex">
+                <a class="nav-link" href="<c:url value="#"/>">Usuário: ${user.userName}</a>
+                <a class="nav-link" href="<c:url value="/logout"/>">Sair</a>
+            </div>
         </div>
-        <hr>
     </nav>
