@@ -12,11 +12,11 @@ public class ProductsService {
     @Autowired
     private IProductsRepository productsRepository;
 
-    public void Add(Product product) {
+    public void add(Product product) {
         productsRepository.addProduct(product);
     }
 
-    public List<Product> getAll() {
+    public List<? extends Product> getAll() {
         return productsRepository.getProducts();
     }
 

@@ -8,18 +8,60 @@ public abstract class Product {
     public float price;
     public String description;
     private LocalDate releaseDate;
+    public String productType;
 
     public Product() {}
 
-    public Product(Integer id, float price, String description, LocalDate releaseDate) {
+    public Product(Integer id, float price, String description, String productType) {
         this();
         this.id = id;
         this.price = price;
         this.description = description;
-        this.releaseDate = releaseDate;
+        this.productType = productType;
     }
 
     public String getReleaseDateString() {
         return releaseDate.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public void setReleaseDate(String releaseDate) {
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        this.releaseDate = LocalDate.parse(releaseDate, dtf);
+    }
+
+    public void setProductType(String productType) {
+        this.productType = productType;
+    }
+
+    public LocalDate getReleaseDate() {
+        return releaseDate;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getProductType() {
+        return productType;
     }
 }
