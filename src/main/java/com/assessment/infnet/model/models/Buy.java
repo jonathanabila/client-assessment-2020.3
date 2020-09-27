@@ -1,16 +1,15 @@
 package com.assessment.infnet.model.models;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class Buy {
-    public Integer id;
-    public LocalDateTime date;
+    private Integer id;
+    private LocalDateTime date;
     private boolean forDelivery;
-    public Buyer buyer;
-    public List<Product> items;
+    private Buyer buyer;
+    private List<Product> items;
 
     public Buy() {}
 
@@ -51,6 +50,14 @@ public class Buy {
 
     public Integer getId() {
         return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setForDelivery(boolean forDelivery) {
+        this.forDelivery = forDelivery;
     }
 
     public boolean getForDelivery() {
