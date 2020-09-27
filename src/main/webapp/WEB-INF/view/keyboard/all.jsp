@@ -25,6 +25,7 @@
 						<th>RGB</th>
 						<th>Macânico</th>
 						<th></th>
+						<th></th>
 					</tr>
 					</thead>
 					<tbody>
@@ -37,6 +38,7 @@
 							<td>${k.getIsRGBString()}</td>
 							<td>${k.getIsMechanicString()}</td>
 							<td><a href="/keyboard/${k.id}/delete">Excluir</a></td>
+							<td><a href="/keyboard/${k.id}/update">Alterar</a></td>
 						</tr>
 					</c:forEach>
 					</tbody>

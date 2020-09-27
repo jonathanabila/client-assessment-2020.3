@@ -33,13 +33,14 @@
 					</tr>
 					</thead>
 					<tbody>
-					<c:forEach var="m" items="${products}">
+					<c:forEach var="p" items="${products}">
 						<tr>
-							<td>${m.id}</td>
-							<td>${m.price}</td>
-							<td>${m.releaseDate}</td>
-							<td>${m.description}</td>
-							<td>${m.getProductTypeString()}</td>
+							<td>${p.id}</td>
+							<td>${p.price}</td>
+							<td>${p.releaseDate}</td>
+							<td>${p.description}</td>
+							<td>${p.getProductTypeString()}</td>
+							<td><a href="/product/${p.id}/delete">Excluir</a></td>
 						</tr>
 					</c:forEach>
 					</tbody>

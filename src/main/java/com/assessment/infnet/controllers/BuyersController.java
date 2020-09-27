@@ -44,4 +44,11 @@ public class BuyersController {
         }
         return "redirect:/buyers";
     }
+
+    @GetMapping(value = "/buyer/{id}/update")
+    public String update(Model model, @PathVariable Integer id) {
+        Buyer buyer = buyersService.getById(id);
+        model.addAttribute("buyer", buyer);
+        return "buyer/add";
+    }
 }

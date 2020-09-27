@@ -25,6 +25,7 @@
 						<th>Tamanho da tela</th>
 						<th>Ajuste de altura</th>
 						<th></th>
+						<th></th>
 					</tr>
 					</thead>
 					<tbody>
@@ -37,6 +38,7 @@
 							<td>${m.screenSize}</td>
 							<td>${m.getHeightAdjustableString()}</td>
 							<td><a href="/monitor/${m.id}/delete">Excluir</a></td>
+							<td><a href="/monitor/${m.id}/update">Alterar</a></td>
 						</tr>
 					</c:forEach>
 					</tbody>

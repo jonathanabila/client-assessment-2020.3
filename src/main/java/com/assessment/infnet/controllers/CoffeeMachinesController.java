@@ -1,5 +1,6 @@
 package com.assessment.infnet.controllers;
 
+
 import com.assessment.infnet.model.models.CoffeeMachine;
 import com.assessment.infnet.model.models.Product;
 import com.assessment.infnet.model.services.CoffeeMachinesService;
@@ -45,5 +46,12 @@ public class CoffeeMachinesController {
         }
 
         return "redirect:/coffee-machines";
+    }
+
+    @GetMapping(value = "/coffee-machine/{id}/update")
+    public String update(Model model, @PathVariable Integer id) {
+        CoffeeMachine coffeeMachine = coffeeMachinesService.getById(id);
+        model.addAttribute("coffeeMachine", coffeeMachine);
+        return "coffee-machine/add";
     }
 }

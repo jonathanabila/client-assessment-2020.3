@@ -25,6 +25,7 @@
 						<th>Controle de temperatura</th>
 						<th>Controle de intensidade</th>
 						<th></th>
+						<th></th>
 					</tr>
 					</thead>
 					<tbody>
@@ -37,6 +38,7 @@
 							<td>${c.strengthControl}</td>
 							<td>${c.temperatureControl}</td>
 							<td><a href="/coffee-machine/${c.id}/delete">Excluir</a></td>
+							<td><a href="/coffee-machine/${c.id}/update">Alterar</a></td>
 						</tr>
 					</c:forEach>
 					</tbody>

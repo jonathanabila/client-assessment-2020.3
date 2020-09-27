@@ -23,6 +23,7 @@
 						<th>CPF</th>
 						<th>Data de nascimento</th>
 						<th></th>
+						<th></th>
 					</tr>
 					</thead>
 					<tbody>
@@ -33,6 +34,7 @@
 							<td>${b.socialSecurityNumber}</td>
 							<td>${b.birth}</td>
 							<td><a href="/buyer/${b.id}/delete">Excluir</a></td>
+							<td><a href="/buyer/${b.id}/update">Alterar</a></td>
 						</tr>
 					</c:forEach>
 					</tbody>

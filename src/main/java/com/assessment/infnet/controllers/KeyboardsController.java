@@ -46,4 +46,11 @@ public class KeyboardsController {
 
         return "redirect:/keyboards";
     }
+
+    @GetMapping(value = "/keyboard/{id}/update")
+    public String update(Model model, @PathVariable Integer id) {
+        Keyboard keyboard = keyboardsService.getById(id);
+        model.addAttribute("keyboard", keyboard);
+        return "keyboard/add";
+    }
 }

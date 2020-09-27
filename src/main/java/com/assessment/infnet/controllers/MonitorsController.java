@@ -45,4 +45,11 @@ public class MonitorsController {
         }
         return "redirect:/monitors";
     }
+
+    @GetMapping(value = "/monitor/{id}/update")
+    public String update(Model model, @PathVariable Integer id) {
+        Monitor monitor = monitorsService.getById(id);
+        model.addAttribute("monitor", monitor);
+        return "monitor/add";
+    }
 }
