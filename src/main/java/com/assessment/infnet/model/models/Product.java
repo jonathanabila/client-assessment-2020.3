@@ -2,6 +2,7 @@ package com.assessment.infnet.model.models;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class Product {
     public Integer id;
@@ -9,12 +10,17 @@ public class Product {
     public String description;
     private LocalDate releaseDate;
     public String productType;
+    private List<Buy> buys;
 
     public Product() {}
 
-    public Product(Integer id, float price, String description, String productType) {
+    public Product(Integer id) {
         this();
-        this.id = id;
+        this.setId(id);
+    }
+
+    public Product(Integer id, float price, String description, String productType) {
+        this(id);
         this.price = price;
         this.description = description;
         this.productType = productType;
@@ -59,6 +65,14 @@ public class Product {
 
     public String getProductType() {
         return productType;
+    }
+
+    public List<Buy> getBuys() {
+        return buys;
+    }
+
+    public void setBuys(List<Buy> buys) {
+        this.buys = buys;
     }
 
     public String getProductTypeString() {
