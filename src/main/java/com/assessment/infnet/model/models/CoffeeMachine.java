@@ -21,7 +21,7 @@ public class CoffeeMachine extends com.assessment.infnet.model.models.Product {
         return this.strengthControl;
     }
 
-    public String getTemperatureControlString(boolean temperatureControl) {
+    public String getTemperatureControlString() {
         if(this.temperatureControl) {
             return "Sim";
         } else {

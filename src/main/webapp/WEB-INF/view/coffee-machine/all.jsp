@@ -35,8 +35,8 @@
 							<td>${c.price}</td>
 							<td>${c.releaseDate}</td>
 							<td>${c.description}</td>
-							<td>${c.strengthControl}</td>
-							<td>${c.temperatureControl}</td>
+							<td>${c.getTemperatureControlString()}</td>
+							<td>${c.getStrengthControlString()}</td>
 							<td><a href="/coffee-machine/${c.id}/delete">Excluir</a></td>
 							<td><a href="/coffee-machine/${c.id}/update">Alterar</a></td>
 						</tr>
