@@ -36,6 +36,7 @@
 							<td>${k.description}</td>
 							<td>${k.getIsRGBString()}</td>
 							<td>${k.getIsMechanicString()}</td>
+							<td><a href="/keyboard/${k.id}/delete">Excluir</a></td>
 						</tr>
 					</c:forEach>
 					</tbody>

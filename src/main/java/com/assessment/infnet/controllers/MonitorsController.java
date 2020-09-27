@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -31,6 +32,17 @@ public class MonitorsController {
     @PostMapping(value = "/monitor")
     public String add(Monitor monitor) {
         monitorsService.add(monitor);
+        return "redirect:/monitors";
+    }
+
+    @GetMapping(value = "/monitor/{id}/delete")
+    public String delete(Model model, @PathVariable Integer id) {
+        try {
+            monitorsService.delete(id);
+        } catch (Exception e) {
+            model.addAttribute("error", "Esse produto está relacionado a uma venda!");
+            return this.getAll(model);
+        }
         return "redirect:/monitors";
     }
 }

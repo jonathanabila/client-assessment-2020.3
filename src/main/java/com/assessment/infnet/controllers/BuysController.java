@@ -62,4 +62,15 @@ public class BuysController {
         buyService.add(buy);
         return "redirect:/buys";
     }
+
+    @GetMapping(value = "/buy/{id}/delete")
+    public String delete(Model model, @PathVariable Integer id) {
+        try {
+            buyService.delete(id);
+        } catch (Exception e) {
+            model.addAttribute("error", "Essa venda não pode ser excluida!");
+            return this.getAll(model);
+        }
+        return "redirect:/buys";
+    }
 }

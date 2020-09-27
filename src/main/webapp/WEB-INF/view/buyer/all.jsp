@@ -32,6 +32,7 @@
 							<td>${b.email}</td>
 							<td>${b.socialSecurityNumber}</td>
 							<td>${b.birth}</td>
+							<td><a href="/buyer/${b.id}/delete">Excluir</a></td>
 						</tr>
 					</c:forEach>
 					</tbody>

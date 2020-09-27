@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
@@ -31,6 +32,18 @@ public class CoffeeMachinesController {
     @PostMapping(value = "/coffee-machine")
     public String add(CoffeeMachine coffeeMachine) {
         coffeeMachinesService.add(coffeeMachine);
+        return "redirect:/coffee-machines";
+    }
+
+    @GetMapping(value = "/coffee-machine/{id}/delete")
+    public String delete(Model model, @PathVariable Integer id) {
+        try {
+            coffeeMachinesService.delete(id);
+        } catch (Exception e) {
+            model.addAttribute("error", "Esse produto está relacionado a uma venda!");
+            return this.getAll(model);
+        }
+
         return "redirect:/coffee-machines";
     }
 }

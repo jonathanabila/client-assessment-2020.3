@@ -36,6 +36,7 @@
 							<td>${m.description}</td>
 							<td>${m.screenSize}</td>
 							<td>${m.getHeightAdjustableString()}</td>
+							<td><a href="/monitor/${m.id}/delete">Excluir</a></td>
 						</tr>
 					</c:forEach>
 					</tbody>

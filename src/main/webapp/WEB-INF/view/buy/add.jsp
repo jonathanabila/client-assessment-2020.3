@@ -37,14 +37,16 @@
 							</thead>
 							<tbody>
 							<c:forEach var="p" items="${products}">
-								<td style="display: flex; justify-content: center">
-									<label>
-										<input type="checkbox" class="form-check-input" name="productsIds" value="${p.id}">
-									</label>
-								</td>
-								<td>${p.description}</td>
-								<td>${p.price}</td>
-								<td>${p.getProductTypeString()}</td>
+								<tr>
+									<td style="display: flex; justify-content: center">
+										<label>
+											<input type="checkbox" class="form-check-input" name="productsIds" value="${p.id}">
+										</label>
+									</td>
+									<td>${p.description}</td>
+									<td>${p.price}</td>
+									<td>${p.getProductTypeString()}</td>
+								</tr>
 							</c:forEach>
 							</tbody>
 						</table>

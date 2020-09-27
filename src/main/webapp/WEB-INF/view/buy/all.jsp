@@ -24,6 +24,7 @@
 						<th>Comprador</th>
 						<th>Qtd. de itens</th>
 						<th></th>
+						<th></th>
 					</tr>
 					</thead>
 					<tbody>
@@ -35,6 +36,7 @@
 							<td>${b.buyer.email}</td>
 							<td>${b.items.size()}</td>
 							<td><a href="/buy/${b.id}">Detalhes</a></td>
+							<td><a href="/buy/${b.id}/delete">Excluir</a></td>
 						</tr>
 					</c:forEach>
 					</tbody>
