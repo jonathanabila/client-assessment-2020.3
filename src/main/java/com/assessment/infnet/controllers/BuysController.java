@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class BuysController {
@@ -50,12 +51,12 @@ public class BuysController {
     }
 
     @PostMapping(value = "/buy")
-    public String add(Buy buy, @RequestParam String[] productsIds) {
+    public String add(Model model, Buy buy, @RequestParam Optional<String[]> productsIds) {
         buy.setBuyer(buyersService.getById(buy.getBuyer().id));
 
         List<Product> productList = new ArrayList<>();
-        if (productsIds != null) {
-            for(String id: productsIds) {
+        if (productsIds.isPresent()) {
+            for(String id: productsIds.get()) {
                 productList.add(productsService.getById(Integer.valueOf(id)));
             }
             buy.setItems(productList);
@@ -63,6 +64,7 @@ public class BuysController {
             buyService.add(buy);
             return "redirect:/buys";
         }
+        model.addAttribute("error", "Você deve selecionar ao menos um produto!");
         return "buy/add";
     }
 
