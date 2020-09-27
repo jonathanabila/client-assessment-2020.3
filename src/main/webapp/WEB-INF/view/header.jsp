@@ -34,3 +34,10 @@
             </div>
         </div>
     </nav>
+    <div style="display: flex; justify-content: center; margin-top: 30px">
+        <c:if test="${not empty error}">
+            <div class="alert alert-danger">
+                <strong>Erro: </strong> ${error}
+            </div>
+        </c:if>
+    </div>
