@@ -51,16 +51,19 @@ public class BuysController {
 
     @PostMapping(value = "/buy")
     public String add(Buy buy, @RequestParam String[] productsIds) {
-        buy.buyer = buyersService.getById(buy.buyer.id);
+        buy.setBuyer(buyersService.getById(buy.getBuyer().id));
 
         List<Product> productList = new ArrayList<>();
-        for(String id: productsIds) {
-            productList.add(productsService.getById(Integer.valueOf(id)));
-        }
-        buy.setItems(productList);
+        if (productsIds != null) {
+            for(String id: productsIds) {
+                productList.add(productsService.getById(Integer.valueOf(id)));
+            }
+            buy.setItems(productList);
 
-        buyService.add(buy);
-        return "redirect:/buys";
+            buyService.add(buy);
+            return "redirect:/buys";
+        }
+        return "buy/add";
     }
 
     @GetMapping(value = "/buy/{id}/delete")
