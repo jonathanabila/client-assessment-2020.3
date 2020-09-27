@@ -65,7 +65,7 @@ public class BuysController {
             return "redirect:/buys";
         }
         model.addAttribute("error", "Você deve selecionar ao menos um produto!");
-        return "buy/add";
+        return this.addPage(model);
     }
 
     @GetMapping(value = "/buy/{id}/delete")
