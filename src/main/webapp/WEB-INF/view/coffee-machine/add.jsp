@@ -10,15 +10,15 @@
 				<div class="form-group">
 					<div>
 						<label for="price">Preço: </label>
-						<input type="number" class="form-control" name="price" id="price" value="${coffeeMachine.price}">
+						<input type="number" class="form-control" name="price" id="price" value="${coffeeMachine.price}" required>
 					</div>
 					<div>
 						<label for="description">Descrição: </label>
-						<input type="text" class="form-control" name="description" id="description" value="${coffeeMachine.description}">
+						<input type="text" class="form-control" name="description" id="description" value="${coffeeMachine.description}" required>
 					</div>
 					<div>
 						<label for="releaseDate">Lançamento: </label>
-						<input type="date" class="form-control" name="releaseDate" id="releaseDate" value="${coffeeMachine.releaseDate}">
+						<input type="date" class="form-control" name="releaseDate" id="releaseDate" value="${coffeeMachine.releaseDate}" required>
 					</div>
 				</div>
 				<div class="form-group">

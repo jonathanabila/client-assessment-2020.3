@@ -10,19 +10,19 @@
 				<div class="form-group">
 					<div>
 						<label for="price">Preço: </label>
-						<input type="number" class="form-control" name="price" id="price" value="${monitor.price}">
+						<input type="number" class="form-control" name="price" id="price" value="${monitor.price}" required>
 					</div>
 					<div>
 						<label for="description">Descrição: </label>
-						<input type="text" class="form-control" name="description" id="description" value="${monitor.description}">
+						<input type="text" class="form-control" name="description" id="description" value="${monitor.description}" required>
 					</div>
 					<div>
 						<label for="releaseDate">Lançamento: </label>
-						<input type="date" class="form-control" name="releaseDate" id="releaseDate" value="${monitor.releaseDate}">
+						<input type="date" class="form-control" name="releaseDate" id="releaseDate" value="${monitor.releaseDate}" required>
 					</div>
 					<div>
 						<label for="screenSize">Tamanho da tela: </label>
-						<input type="number" class="form-control" name="screenSize" id="screenSize" value="${monitor.screenSize}">
+						<input type="number" class="form-control" name="screenSize" id="screenSize" value="${monitor.screenSize}" required>
 					</div>
 				</div>
 				<div class="form-group">

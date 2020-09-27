@@ -10,15 +10,15 @@
 				<div class="form-group">
 					<div>
 						<label for="price">Preço: </label>
-						<input type="number" class="form-control" name="price" id="price" value="${keyboard.price}">
+						<input type="number" class="form-control" name="price" id="price" value="${keyboard.price}" required>
 					</div>
 					<div>
 						<label for="description">Descrição: </label>
-						<input type="text" class="form-control" name="description" id="description" value="${keyboard.description}">
+						<input type="text" class="form-control" name="description" id="description" value="${keyboard.description}" required>
 					</div>
 					<div>
 						<label for="releaseDate">Lançamento: </label>
-						<input type="date" class="form-control" name="releaseDate" id="releaseDate" value="${keyboard.releaseDate}">
+						<input type="date" class="form-control" name="releaseDate" id="releaseDate" value="${keyboard.releaseDate}" required>
 					</div>
 				</div>
 				<div class="form-group">

@@ -10,15 +10,15 @@
 				<div class="form-group">
 					<div>
 						<label for="email">Email: </label>
-						<input type="email" class="form-control" name="email" id="email" value="${buyer.email}">
+						<input type="email" class="form-control" name="email" id="email" value="${buyer.email}" required>
 					</div>
 					<div>
 						<label for="socialSecurityNumber">CPF: </label>
-						<input type="number" class="form-control" name="socialSecurityNumber" id="socialSecurityNumber" value="${buyer.socialSecurityNumber}">
+						<input type="number" class="form-control" name="socialSecurityNumber" id="socialSecurityNumber" value="${buyer.socialSecurityNumber}" required>
 					</div>
 					<div>
 						<label for="birth">Data de nascimento: </label>
-						<input type="date" class="form-control" name="birth" id="birth" value="${buyer.birth}">
+						<input type="date" class="form-control" name="birth" id="birth" value="${buyer.birth}" required>
 					</div>
 				</div>
 				<button type="submit" class="btn btn-primary">Salvar</button>

@@ -10,7 +10,7 @@
 
 				<div class="form-group">
 					<label for="buyers">Comprador:</label>
-					<select id="buyers" class="form-control" name="buyer.id">
+					<select id="buyers" class="form-control" name="buyer.id" required>
 						<c:forEach var="b" items="${buyers}">
 							<option value="${b.id}">${b.email}</option>
 						</c:forEach>
