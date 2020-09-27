@@ -30,9 +30,11 @@
 						</thead>
 						<tbody>
 						<c:forEach var="p" items="${buy.items}">
-							<td>${p.description}</td>
-							<td>${p.price}</td>
-							<td>${p.getProductTypeString()}</td>
+							<tr>
+								<td>${p.description}</td>
+								<td>${p.price}</td>
+								<td>${p.getProductTypeString()}</td>
+							</tr>
 						</c:forEach>
 						</tbody>
 					</table>
